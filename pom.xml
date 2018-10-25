@@ -11,6 +11,7 @@
     <modules>
         <module>perso-translate-manga-front</module>
         <module>perso-translate-manga-api</module>
+        <module>perso-translate-manga-persistance</module>
     </modules>
     <properties>
         <!-- Build configuration -->
