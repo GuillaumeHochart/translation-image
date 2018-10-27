@@ -18,6 +18,7 @@ import com.translate.manga.persistance.CoordonneesJson;
 import com.translate.manga.persistance.PageJson;
 import com.translate.manga.persistance.PhraseJson;
 import com.translate.manga.persistance.repository.PageRepository;
+import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
@@ -172,17 +173,25 @@ public class ServiceVisionCall {
 
         BufferedImage image= ImageIO.read(new ClassPathResource("test2.jpg").getInputStream());
 
-        Graphics g =image.getGraphics();
 
         for(PhraseJson p:phraseJsons){
+
+            Graphics g =image.getGraphics();
+
             g.setColor(Color.white);
-            g.fillRect(p.getCoordonneesJsonList().get(0).getX(),
-                    p.getCoordonneesJsonList().get(0).getY(),
-                    p.getCoordonneesJsonList().get(0).getX()-p.getCoordonneesJsonList().get(1).getX(),
-                    p.getCoordonneesJsonList().get(0).getY()-p.getCoordonneesJsonList().get(1).getY());
-            g.setFont(g.getFont().deriveFont(30f));
+            g.fillRect(p.getCoordonneesJsonList().get(0).getX()-10,
+                    p.getCoordonneesJsonList().get(0).getY()-10,
+                    p.getCoordonneesJsonList().get(1).getX()-p.getCoordonneesJsonList().get(0).getX()+15,
+                    p.getCoordonneesJsonList().get(2).getY()-p.getCoordonneesJsonList().get(0).getY()+15);
+            g.setFont(g.getFont().deriveFont(25f));
             g.setColor(Color.BLACK);
-            g.drawString(p.getPhraseTraduite(), p.getCoordonneesJsonList().get(0).getX(), p.getCoordonneesJsonList().get(0).getY());
+            //g.drawString(StringEscapeUtils.unescapeXml(p.getPhraseTraduite()), p.getCoordonneesJsonList().get(0).getX(), p.getCoordonneesJsonList().get(0).getY());
+            drawStringMultiLine(
+                    (Graphics2D)g,
+                    StringEscapeUtils.unescapeXml(p.getPhraseTraduite()),
+                    p.getCoordonneesJsonList().get(2).getY()-p.getCoordonneesJsonList().get(0).getY()+15,
+                    p.getCoordonneesJsonList().get(0).getX(), p.getCoordonneesJsonList().get(0).getY()
+                    );
             g.dispose();
         }
 
@@ -192,5 +201,26 @@ public class ServiceVisionCall {
 
         pageRepository.save(pageJson);
 
+    }
+    public void drawStringMultiLine(Graphics2D g, String text, int lineWidth, int x, int y) {
+        FontMetrics m = g.getFontMetrics();
+        if(m.stringWidth(text) < lineWidth) {
+            g.drawString(text, x, y);
+        } else {
+            String[] words = text.split(" ");
+            String currentLine = words[0];
+            for(int i = 1; i < words.length; i++) {
+                if(m.stringWidth(currentLine+words[i]) < lineWidth) {
+                    currentLine += " "+words[i];
+                } else {
+                    g.drawString(currentLine, x, y);
+                    y += m.getHeight();
+                    currentLine = words[i];
+                }
+            }
+            if(currentLine.trim().length() > 0) {
+                g.drawString(currentLine, x, y);
+            }
+        }
     }
 }
