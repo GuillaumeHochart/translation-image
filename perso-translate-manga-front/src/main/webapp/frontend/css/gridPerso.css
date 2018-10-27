@@ -1,0 +1,42 @@
+.green-validation {
+    font-family: var(--lumo-font-family);
+    font-size: var(--lumo-font-size-m);
+    font-weight: 500;
+    color: white;
+    background-color: #1D976C;
+    border-radius: var(--lumo-border-radius);
+    cursor: default;
+    width: 95%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+
+}
+.green-validation[disabled][disabled] {
+    pointer-events: none;
+    color: var(--lumo-disabled-text-color);
+    background-color: gainsboro;
+
+}
+
+vaadin-grid:not([theme~="no-row-borders"]) [part="row"].vaadin-grid:first-child [part~="footer-cell"].vaadin-grid{
+    background-color: #EFEFEF;
+}
+
+vaadin-grid:not([theme~="no-row-borders"]) [part="row"].vaadin-grid:first-child [part~="header-cell"].vaadin-grid{
+    background-color: #EFEFEF;
+}
+
+#table.vaadin-grid {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    z-index: -2;
+    position: fixed;
+    outline: none;
+    box-shadow: 7px 6px 4px rgba(0, 0, 0, 0.12);
+}
+#scroller {
+    height: 90%;
+}

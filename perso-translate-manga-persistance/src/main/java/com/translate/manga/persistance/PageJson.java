@@ -9,17 +9,49 @@ import java.util.List;
 public class PageJson {
 
     @Id
+    private String key; //name-project + name page
+
     private String filename;
 
-    private byte[] content;
+    private String formatName;
+
+    private byte[] contentNotModified;
+
+    private byte[] contentTraducted;
 
     private List<PhraseJson> phraseJsonList;
 
     public PageJson(){}
 
-    public PageJson(String filename, byte[] content) {
+    public PageJson(String key,String filename, String formatName, byte[] contentNotModified) {
         this.filename = filename;
-        this.content = content;
+        this.key=key;
+        this.formatName=formatName;
+        this.contentNotModified = contentNotModified;
+    }
+
+    public String getFormatName() {
+        return formatName;
+    }
+
+    public void setFormatName(String formatName) {
+        this.formatName = formatName;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public byte[] getContentTraducted() {
+        return contentTraducted;
+    }
+
+    public void setContentTraducted(byte[] contentTraducted) {
+        this.contentTraducted = contentTraducted;
     }
 
     public String getFilename() {
@@ -30,12 +62,12 @@ public class PageJson {
         this.filename = filename;
     }
 
-    public byte[] getContent() {
-        return content;
+    public byte[] getContentNotModified() {
+        return contentNotModified;
     }
 
-    public void setContent(byte[] content) {
-        this.content = content;
+    public void setContentNotModified(byte[] contentNotModified) {
+        this.contentNotModified = contentNotModified;
     }
 
     public List<PhraseJson> getPhraseJsonList() {

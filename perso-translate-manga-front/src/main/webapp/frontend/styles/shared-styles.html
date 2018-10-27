@@ -1,0 +1,23 @@
+<custom-style>
+    <!-- This is where your App's styling should go. You can use .css files too. -->
+    <style>
+        .main-layout {
+            padding: 20px;
+        }
+    </style>
+</custom-style>
+
+
+<dom-module id="my-text-field-styles" theme-for="vaadin-text-field">
+    <template>
+        <style>
+            [part="input-field"] {
+                width: 100%;
+
+            }
+            [part="label"]{
+                margin-left: -10%;
+            }
+        </style>
+    </template>
+</dom-module>

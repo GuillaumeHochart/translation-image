@@ -1,20 +1,7 @@
 package com.translate.manga;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.google.api.gax.core.FixedCredentialsProvider;
-import com.google.api.services.storage.model.Bucket;
-import com.google.auth.oauth2.GoogleCredentials;
-import com.google.cloud.storage.Storage;
-import com.google.cloud.storage.StorageOptions;
-import com.google.cloud.translate.Translate;
-import com.google.cloud.translate.TranslateOptions;
-import com.google.cloud.translate.Translation;
-import com.google.cloud.vision.v1.*;
 import com.google.cloud.vision.v1.Image;
-import com.google.common.collect.Lists;
 import com.google.common.io.ByteStreams;
-import com.translate.manga.persistance.CoordonneesJson;
 import com.translate.manga.persistance.PageJson;
 import com.translate.manga.persistance.PhraseJson;
 import com.translate.manga.persistance.repository.PageRepository;
@@ -23,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
-import com.google.cloud.vision.v1.Feature.Type;
 import com.google.protobuf.ByteString;
 
 import javax.annotation.PostConstruct;
@@ -31,19 +17,12 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.security.PrivateKey;
-import java.security.interfaces.RSAPrivateKey;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-@Service
+/*@Service
 public class ServiceVisionCall {
 
     private List<PhraseJson> phraseJsons=new ArrayList<>();
@@ -66,7 +45,7 @@ public class ServiceVisionCall {
 
             InputStream is=new ClassPathResource("test2.jpg").getInputStream();
             byte[] data= ByteStreams.toByteArray(is);
-            pageJson.setContent(data);
+            pageJson.setContentNotModified(data);
             pageJson.setFilename("test2.jpg");
             ByteString imgBytes = ByteString.copyFrom(data);
             Image img = Image.newBuilder().setContent(imgBytes).build();
@@ -75,7 +54,7 @@ public class ServiceVisionCall {
 
 
             //IDENTIFICATION
-            InputStream isP = new ClassPathResource("project.json").getInputStream();
+           /*InputStream isP = new ClassPathResource("project.json").getInputStream();
             GoogleCredentials credential = GoogleCredentials.fromStream(isP).createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"));
 
             ImageAnnotatorSettings imageAnnotatorSettings =
@@ -148,11 +127,11 @@ public class ServiceVisionCall {
                 }
                 System.out.print("");
 
-            }
+            }*/
 
             //TRANSLATE
 
-            Translate translate = TranslateOptions.newBuilder().setCredentials(credential).build().getService();
+            /*Translate translate = TranslateOptions.newBuilder().setCredentials(credential).build().getService();
 
 
             for (PhraseJson p : phraseJsons) {
@@ -222,5 +201,4 @@ public class ServiceVisionCall {
                 g.drawString(currentLine, x, y);
             }
         }
-    }
-}
+    }}*/

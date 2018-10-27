@@ -1,0 +1,101 @@
+.Menu-Bar{
+    height: 71px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    background-color: #1D976C;
+    background-image: -webkit-gradient(linear, left top, right top, from(#1D976C), to(#93F9B9));
+    background-image: -webkit-linear-gradient(left, #1D976C, #93F9B9);
+    background-image: -moz-linear-gradient(left, #1D976C, #93F9B9);
+    background-image: -ms-linear-gradient(left, #1D976C, #93F9B9);
+    background-image: -o-linear-gradient(left, #1D976C, #93F9B9);
+    background-image: linear-gradient(left, #1D976C, #93F9B9);
+}
+.secondeTopBar{
+    min-height: 31px;
+    background-color: #EFEFEF;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    width: 100%;
+}
+.TopButton {
+    background-color: transparent !important;
+    color: white;
+    border-radius: 12px;
+    border: 2px solid white;
+    margin-left: 50px !important;
+    height: 70%;
+    vertical-align: middle;
+    margin-top: 7px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.TopButton:hover {
+
+}
+.TopIcon{
+    background-color: transparent!important;
+}
+.TopMenuGeneral{
+    background-color: #2B2B2B;
+    overflow: auto;
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    height:65px;
+    position: fixed;
+}
+.TopButtonGeneral{
+    background-color: transparent !important;
+    color: white;
+    border-radius: 12px;
+    float: right;
+    margin-left: 50px !important;
+    height: 70%;
+    margin-top: 7px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.contentRightTop{
+    float: right;
+    overflow: auto;
+    display: inline-block;
+    height:100%;
+    background-color:#3A3A3A;
+
+}
+.contentLeftTop{
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+    height:100%;
+    background-color: #2B2B2B;
+}
+.iconPerso{
+    color: #00b0ff;
+}
+.userImage{
+    border-radius: 50%;
+    float: right;
+    margin-top: 9px;
+    height: 62%;
+    margin-right: -50px;
+}
+.TopButtonLeft{
+    color: #00b0ff;
+    float: left;
+    cursor: pointer;
+    height: 100%;
+    margin-left: 50px !important;
+    background-color: #3A3A3A;
+    margin-top: 0px;
+}
+.TopButtonLeftNotActive{
+    color: #068eb1;
+    float: left;
+    cursor: pointer;
+    height: 100%;
+    margin-left: 50px !important;
+    margin-top: 0px;
+
+}

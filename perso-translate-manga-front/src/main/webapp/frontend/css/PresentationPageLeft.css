@@ -1,0 +1,50 @@
+.titreLayout{
+    width: 400px;
+    background-color: #00b0ff;
+    background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+    border-bottom: 1px solid#1362b1;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+    color: white;
+    margin-top: -20px!important;
+    z-index: 1000000;
+    height: 106px;
+}
+
+
+.logoPresentation{
+    border-radius: 50%;
+    display: inline-block;
+    width: 80px;
+
+}
+.content-all{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0px !important;
+    line-height: 20px;
+}
+.h1Title{
+    display: inline-block;
+    color: whitesmoke!important;
+    margin-top: 48px !important;
+    font-weight: bolder;
+}
+.h1TitleAccueil{
+    display: inline-block;
+    color: whitesmoke!important;
+    margin-top: 48px !important;
+    font-weight: lighter;
+
+}
+.h5Info{
+    color: #a5a5a5!important;
+}
+.h5Info-sansEspace{
+    color: #a5a5a5!important;
+    margin: 0px!important;
+}

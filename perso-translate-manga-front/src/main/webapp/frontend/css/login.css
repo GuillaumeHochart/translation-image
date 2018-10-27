@@ -1,0 +1,99 @@
+@import "indicator.css";
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+html {
+    background: url(../../car2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+.accueil-content{
+    text-align: center;
+    display: inline-block;
+}
+
+.main-layout{
+    height: 44%;
+    width: 22% !important;
+    padding: 0px !important;
+    background-color: #FFFFFFF0;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10%;
+}
+#content.vaadin-form-item {
+    flex: 1 1 auto;
+    margin-left: 5%;
+}
+
+.accueil-logo {
+    height: 34%;
+    margin:auto;
+    display: inline-block;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 80%;
+}
+.accueil-check{
+    display: inline-block;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+.green-validation {
+    font-family: var(--lumo-font-family);
+    font-size: var(--lumo-font-size-m);
+    font-weight: 500;
+    color: white;
+    background-color:#1D976C ;
+    border-radius: var(--lumo-border-radius);
+    cursor: default;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 10%;
+    cursor: pointer;
+    display: inline-block;
+}
+.green-validation[disabled][disabled] {
+              pointer-events: none;
+              color: var(--lumo-disabled-text-color);
+              background-color: gainsboro;
+
+}
+.label-co{
+    margin-bottom: -4%;
+    font-size: 15px;
+    color: dimgray;
+    font-style: italic;
+}
+[part="label"].vaadin-form-item {
+    color: var(--lumo-secondary-text-color);
+    font-family: var(--lumo-font-family);
+    font-size: var(--lumo-font-size-s);
+    font-weight: 500;
+    margin-left: 5%;
+    margin-top: var(--lumo-space-m);
+    /* margin-left: calc(var(--lumo-border-radius) / 4); */
+    margin-bottom: var(--lumo-space-xs);
+    transition: color 0.4s;
+    line-height: 1.333;
+}
+
+vaadin-horizontal-layout[theme~="spacing"] > label {
+    margin-left: -17px;
+}

@@ -1,0 +1,104 @@
+.content-creationCourtier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+
+}
+.banderolle-layout-text{
+    margin-top: -32px;
+}
+.logo-content{
+    border-radius: 50%;
+    display: inline-block;
+    width: 100px;
+}
+.panel-content-global {
+    overflow: auto!important;
+    box-sizing: border-box !important;
+    border-radius: 3px;
+    border: 1px solid #d5d5d5;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+    padding: 0px!important;
+    width: 70%!important;
+    height: 65%!important ;
+
+}
+.banderolle-content{
+    background-color: #00b0ff;
+    background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+    border-bottom: 1px solid #1362b1;
+    width: 70%;
+    color: whitesmoke;
+    margin-bottom: -20px;
+    z-index: 10;
+    height: 180px;
+}
+.titre-content{
+    color: whitesmoke!important;
+    font-weight: lighter!important;
+    padding-top: 0px!important;
+}
+.desc-titre{
+    color: whitesmoke!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+.buttonTitreSection-content{
+    border-radius: 50%;
+    justify-content: center;
+    background-color: #1463b2 !important;
+    color: whitesmoke !important;
+    text-decoration: none;
+    height: 50px!important;
+    width: 50px!important;
+    text-align: center;
+    margin-top: 25px !important;
+}
+.titreSection-content{
+    font-weight: lighter!important;
+}
+.num-section{
+    font-weight: lighter!important;
+    color: whitesmoke!important;
+}
+.panel-content-section{
+    background-color: whitesmoke;
+
+}
+.titreSectionLayout-content{
+    margin-top: -15px!important;
+}
+.content-section{
+    margin-bottom: -40px!important;
+    display: inline-block;
+}
+.desc-section{
+    font-weight: lighter!important;
+    color: #a5a5a5;
+}
+.desc-sous-section{
+    font-weight: lighter!important;
+    color: #a5a5a5;
+}
+.button-content{
+    background-color: #1463b2 !important;
+    color: whitesmoke !important;
+    pointer-events: auto;
+
+}
+.valider-content{
+    background-color: #1463b2 !important;
+    color: whitesmoke !important;
+    pointer-events: auto;
+
+}
+#validation-Button{
+     float: right;
+ }
+.panelValidation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
